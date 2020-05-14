@@ -1,0 +1,131 @@
+.staring-home {
+    color: white;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 1.8em;
+    display: flex;
+
+    .navibar {
+        width: 65%;
+        position: fixed;
+        z-index: 1001;
+
+        .container-fluid {
+            padding: 0 7rem;
+            display: flex;
+
+            .brand-name {
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 8px;
+                cursor: pointer;
+            }
+
+            .navigation {
+                padding-top: 10px;
+
+                .navigation-item {
+                    font-family: sans-serif;
+                    font-size: 17px;
+
+                    ul {
+                        list-style-type: none;
+                        display: flex;
+
+                        li {
+                            margin-right: 2rem;
+                            cursor: pointer;
+
+                            .divider {
+                                margin-top: 3px;
+                                animation: underline .5s ease forwards;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .white-navibar {
+        background-color: white;
+        color: #352961;
+        padding: 0.2rem 0;
+        animation: fadeout .3s linear forwards;
+    }
+
+    .vio-navibar {
+        background-color: #352961;
+        color: white;
+        padding: 1rem 0;
+        animation: fadein .3s linear forwards;
+    }
+
+    .white-divider {
+        background-color: white;
+    }
+
+    .vio-divider {
+        background-color: #352961;
+    }
+
+    .login-sec {
+        width: 35%;
+        text-align: center;
+        padding: 1rem 0;
+        position: fixed;
+        right: 0;
+        z-index: 1001;
+        background-color: white;
+
+        button {
+            width: 7rem;
+            height: 3.5rem;
+            font-size: 17px;
+        }
+    }
+
+    .short-login-sec {
+        padding: 0.45rem 0;
+        animation: .3s linear forwards;
+
+        button {
+            height: 2.5rem;
+        }
+    }
+}
+
+.white-starting {
+    height: 7vh;
+}
+
+.vio-starting {
+    height: 10vh;
+}
+
+@keyframes underline {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        background-color: #352961;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        background-color: white;
+    }
+
+    100% {
+        background-color: #352961;
+    }
+}

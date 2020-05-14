@@ -1,0 +1,49 @@
+<div class="contact-container">
+    <div class="content">
+        <section class="intro">
+            <h1> 
+                Contact Us
+            </h1>
+        </section>
+    </div>
+    <div class="contact-body">
+        <div class="contact-form">
+            <div class="header-text"> Please write your query here and send it to us. You will receive a call back from us with in 24 hours. </div>
+            <form [formGroup]="contactForm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <mat-form-field class="full-width">
+                            <mat-label>First Name</mat-label>
+                            <input type="text" matInput formControlName="fName" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field class="full-width">
+                            <mat-label>Last Name</mat-label>
+                            <input type="text" matInput formControlName="lName" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                
+                <mat-form-field class="full-width">
+                    <mat-label>Subject</mat-label>
+                    <input type="text" matInput formControlName="subject" required>
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>From</mat-label>
+                    <input type="text" matInput formControlName="fromEmail" required>
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>Write your message</mat-label>
+                    <textarea matInput rows="5" formControlName="message" required></textarea>
+                </mat-form-field>
+                <div class="btn-sec">
+                    <button mat-raised-button class="prime-btn">SEND</button>
+                </div>
+            </form>
+        </div>
+        <div class="contact-image">
+            <!-- <img src="../../../assets/images/contact-us-image.jpg" alt="image"> -->
+        </div>
+    </div>
+</div>

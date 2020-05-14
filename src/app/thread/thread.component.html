@@ -1,0 +1,97 @@
+<div class="thread-container">
+    <div class="row posts">
+        <div class="col-md-8 left-sec">
+            <div class="row custom-card" *ngFor="let thread of threads">
+                <div class="col-md-1">
+                    <div class="avatar">
+                        <img src={{thread.profileImage}} alt="">
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="thread-head"> {{ thread.createdBy }} </div>
+                    <div class="thread-sub-head"> {{ thread.createdOn }} </div> 
+                    <div class="votes">
+                        <img src="../../assets/images/thumbsup.png" matTooltip="Votes" alt=""> {{ thread.votes }}
+                        <img src="../../assets/images/unlike.png"  matTooltip="Reported Spam" alt=""> {{ thread.flags }}
+                        <button mat-mini-fab class="success vote-btn">
+                            <mat-icon matTooltip="Vote this thread">thumb_up_alt</mat-icon>
+                        </button>
+                        <button mat-mini-fab color="warn" class="vote-btn">
+                            <mat-icon matTooltip="Report this thread">flag</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                <div [ngClass]="{'col-md-7' : thread?.images?.length > 0, 'col-md-12': thread?.images?.length === 0}">
+                    <div class="thread-desc">
+                        {{ thread.description }}
+                    </div>
+                </div>
+                <div *ngIf="thread?.images?.length > 0" class="col-md-5">
+                    <div class="thread-image">
+                        <carousel [interval]="postImageInterval">
+                            <slide *ngFor="let slide of thread.images; let i = index">
+                              <img src={{slide}} alt="first slide" style="display: block; height: 70%; width: 100%;">
+                            </slide>
+                        </carousel>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-card show-more">
+                show more
+            </div>
+        </div>
+        <div class="col-md-4 right-sec">
+            <div class="search">
+                <span class="filter-header"> 
+                    <img src="../../assets/images/arrow_right.png">
+                    <i> filters </i>
+                </span>
+                <br>
+                <span class="inner-filter">
+                    <img src="../../assets/images/arrow_right.png" *ngIf="!showStatesFilter" (click)="openFilter('state')">
+                    <img src="../../assets/images/arrow_drop_down.png" *ngIf="showStatesFilter" (click)="openFilter('state')">
+                    <i> state </i>
+                    <div class="filter-div" *ngIf="showStatesFilter">
+                        <ul>
+                            <li *ngFor="let state of states">
+                                <mat-checkbox (click)="onStateSelectionChange(state)"> {{ state }} </mat-checkbox>
+                            </li>
+                        </ul>
+                    </div>
+                </span>
+                <br>
+                <span class="inner-filter">
+                    <img src="../../assets/images/arrow_right.png" *ngIf="!showInterestFilter" (click)="openFilter('interest')">
+                    <img src="../../assets/images/arrow_drop_down.png" *ngIf="showInterestFilter" (click)="openFilter('interest')">
+                    <i> interest </i>
+                    <div class="filter-div" *ngIf="showInterestFilter">
+                        <ul>
+                            <li *ngFor="let interest of interests">
+                                <mat-checkbox (click)="onStateSelectionChange(interest)"> {{ interest }} </mat-checkbox>
+                            </li>
+                        </ul>
+                    </div>
+                </span>
+            </div>
+            <div class="contact-us">
+                <h5>Contact Us</h5>
+                <br>
+                <div class="address">
+                    <img src="../../assets/images/address-red.png" alt=""> <div> 12 Lockton Ct, <br> Church Fenton, <br> MG Road, Bangalore, <br> Karnataka, India - 755098</div>
+                </div>
+                <div>
+                    <img src="../../assets/images/mobile.png" alt=""> <span>(+91) (80935)(09614)</span>
+                    <br>
+                    <img src="../../assets/images/local_phone.png" alt=""> <span> (0674) (456755) </span>
+                    <br>
+                    <img src="../../assets/images/email_dark.png" alt=""> <span> swagat.m2011@gmail.com </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="create-thread" (click)="toggleCreateText()">
+        <img src="../../assets/images/createThread.png" alt="create thread button">
+    </div>
+    <span class="create-text" *ngIf="createText" (click)="createThread()">Create A New Thread</span>
+</div>

@@ -1,0 +1,20 @@
+<div (scroll)="onScroll($event)">
+    <app-common-header [hasScrolled]="hasScrolled"></app-common-header>
+</div>
+<div class="container-cls">
+    <div class="row">
+        <div class="col-md-1 side-menu">
+            <div class="menu-itm" [ngClass]="{'selected-item': activateRoute === 'threads'}" (click)="navigateTo('threads')">
+                Threads
+            </div>
+            <br>
+            <div class="menu-itm" [ngClass]="{'selected-item': activateRoute === 'training'}" (click)="navigateTo('trainings')">
+                Training
+            </div>
+        </div>
+        <div class="col-md-10 right-sec">
+            <router-outlet></router-outlet>
+        </div>
+    </div>    
+</div>
+

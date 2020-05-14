@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <h5 class="modal-title pull-left">{{ title }}</h5>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row" *ngIf="fullName" style="margin-left: 3px;">
+        <div mat-card-avatar class="col-md-1" [ngClass]="{
+            'name-avatar-zero': i === 0,
+            'name-avatar-one': i === 1,
+            'name-avatar-two': i === 2,
+            'name-avatar-three': i === 3,
+            'name-avatar-four': i === 4
+            }">
+        </div>
+        <div class="col-md-6" class="name-details"> 
+            <span> {{ fullName }} </span> <br>
+            <span class="date"> 20 Apr 2020 </span>
+        </div>
+    </div>
+    <br>
+    {{ data }}
+    <br>
+    <br>
+    <div class="vote" *ngIf="voteCount">
+        <!-- <img src="../../../assets/images/greentick.png" alt="vote-tick"> -->
+        
+        <span class="vote-text">
+            <mat-icon>done</mat-icon>
+            <span> Votes: {{ voteCount | numberFormatter : 2 }} </span>
+        </span>
+    </div>
+</div>
+
+<div class="modal-footer" *ngIf="closeBtnName">
+    <button type="button" class="btn btn-danger" (click)="bsModalRef.hide()"> 
+        <mat-icon class="cross">clear</mat-icon> 
+        <span class="btn-txt"> {{ closeBtnName }} </span>
+    </button>
+</div>

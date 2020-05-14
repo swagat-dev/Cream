@@ -1,0 +1,29 @@
+<div (scroll)="onScroll($event)">
+    <app-cr-header [hasScrolled]="hasScrolled" [changedHeading]="changedHeading" (scrollEvent)="scrollEvent($event)"></app-cr-header>
+    <div id="Home"><app-cr-home></app-cr-home></div>
+    <div id="Process"><app-cr-process></app-cr-process></div>
+    <div id="Statistics"><app-cr-graph></app-cr-graph></div>
+    <div id="Winners"><app-cr-winners></app-cr-winners></div>
+    <div id="Contact"><app-cr-contact></app-cr-contact></div>
+</div>
+<div class="footer-div">
+    <div class="social-media">
+        <img src="../../assets/images/facebook-circled.png" alt="facebook">
+        <img src="../../assets/images/twitter-circled.png" alt="twitter">
+        <img src="../../assets/images/instagram.png" alt="instagram">
+        <img src="../../assets/images/youtube.png" alt="youtube">
+    </div>
+    <div class="social-media">
+        <ul class="list">
+            <li>Back to Top</li>
+            <li>Need Help?</li>
+            <li>Privacy</li>
+            <li>Terms of Use</li>
+            <li>Advertising</li>
+        </ul>
+    </div>
+    <div class="social-media last-ele">
+        Copyright &copy; Cream Bangalore, Inc. or its affiliates. All rights reserved.
+    </div>
+    <div class="social-media small-font"> Cream - A Social App ((+91) 80935-09614)</div>
+</div>

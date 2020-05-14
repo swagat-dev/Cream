@@ -1,0 +1,32 @@
+<div class="winner-container">
+    <div class="content">
+        <section class="intro">
+            <h1>
+                Cream Winners
+            </h1>
+        </section>
+    </div>
+
+    <div class="carousel-content">
+        <div *ngFor="let slide of firstSilderList; let index=index">
+            <div class="first-img-cnt" [ngClass]="{'slide-toleft': moveRight}" *ngIf="!moveRight">
+                <img [src]="slide.imgSrc" alt="image slide" style="display: block; width: 100%;">
+                <div class="details">
+                    <h4>{{ slide.month }} {{ slide.year }}</h4>
+                </div>
+            </div>
+        </div>
+        <div *ngFor="let slide of secondSilderList; let index=index">
+            <div class="sec-img-cnt" [ngClass]="{'slide-toright': !moveRight}" *ngIf="moveRight">
+                <img [src]="slide.imgSrc" alt="image slide" style="display: block; width: 100%;">
+                <div class="details">
+                    <h4>{{ slide.month }} {{ slide.year }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="circle">
+        <div (click)="circleClicked('first')"></div>
+        <div (click)="circleClicked('second')"></div>
+    </div>
+</div>

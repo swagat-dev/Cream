@@ -1,0 +1,117 @@
+<div class="row top-div">
+    <div class="col-md-9 col-sm-9 why-cream">
+        <div class="shadow">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title> What is <strong> Cream </strong> ? </mat-card-title>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <mat-card-content>
+                    <div class="row">
+                        <section class="col-md-6">
+                            Create an understaning Society.
+                            We live in society where multiple mindsets are in a float. Need to understand 
+                            the need and mind of each groups like farmers,religious groups,political group,
+                            NGOs and Critics. We envisiage a  crowd which would bring the changes in the mindset of the people
+                            who else wise are involved in rat race, instead of a race that would build the
+                            country.
+                        </section>
+                        <section class="col-md-6">
+                            Building the country,
+                            we will be grouping the crowd by constituency. <br>
+                            There would be three groups in each constituency
+                            <ol class="cursor-pointer">
+                                <li (click)="openRoleDetails('Candidates')">Cream Candidates</li>
+                                <li (click)="openRoleDetails('Supporters')">Supporters</li>
+                                <li (click)="openRoleDetails('Observers')">Observers</li>
+                                <li (click)="openRoleDetails('Trainers')">Trainers</li>
+                            </ol>
+                            <br>
+                            ** Click on each <b> Role </b> to know more..!
+                        </section>
+                        <br>
+                        <span class="last-line"> All these groups has their own importance of building a CREAM country to live in. </span>
+                    </div>
+                    <div class="btn-div">
+                        <button mat-raised-button class="success" [ngClass]="{'button-up': opened}" (click)="login()" >Sign in to Continue <mat-icon>keyboard_arrow_right</mat-icon> </button>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        
+        <div>
+            <div class="row">
+                <div class="col-md-6 paddingleft-zero">
+                    <mat-card class="shadow">
+                        <highcharts-chart 
+                        [Highcharts]="Highcharts"
+                        [options]="chartForEntireThread"
+                        style="width: 100%; height: 400px; display: block;"
+                        ></highcharts-chart>
+                    </mat-card>
+                </div>
+                
+                <div class="col-md-6 paddingright-zero">
+                    <mat-card class="shadow">
+                        <highcharts-chart 
+                            [Highcharts]="Highcharts"
+                            [options]="chatForOneYear"
+                            style="width: 100%; height: 400px; display: block;"
+                        ></highcharts-chart>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-md-3 col-sm-3 winner-list">
+        <mat-card class="shadow">
+            <mat-card-header>
+                <mat-card-title class="winner-head">Winners List <img src="../../../../assets/images/medal.png" alt=""> </mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            
+            <mat-card-content class="card-content">
+                <div class="carousel-area">
+                    <carousel (activeSlideChange)="onCarouselChange($event)">
+                        <slide *ngFor="let slide of silderList; let i = index">
+                          <img src={{slide.imgSrc}} alt="first slide" style="display: block; width: 100%;" (click)="showThread(i)">
+                          <div class="carousel-caption d-none d-md-block">
+                            <h5>{{ slide.month }} {{ slide.year }}</h5>
+                          </div>
+                        </slide>
+                    </carousel>
+                </div>
+                <button mat-raised-button color="primary" (click)="showThread(i)">Show Thread</button>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="shadow">
+            <highcharts-chart 
+                [Highcharts]="Highcharts"
+                [options]="userChat"
+                style="width: 100%; height: 360px; display: block;"
+            ></highcharts-chart>
+        </mat-card>
+    </div>
+</div>
+<div class="footer-div">
+    <div class="social-media">
+        <img src="../../../../assets/images/facebook-circled.png" alt="facebook">
+        <img src="../../../../assets/images/twitter-circled.png" alt="twitter">
+        <img src="../../../../assets/images/instagram.png" alt="instagram">
+        <img src="../../../../assets/images/youtube.png" alt="youtube">
+    </div>
+    <div class="social-media">
+        <ul class="list">
+            <li>Back to Top</li>
+            <li>Need Help?</li>
+            <li>Privacy</li>
+            <li>Terms of Use</li>
+            <li>Advertising</li>
+        </ul>
+    </div>
+    <div class="social-media last-ele">
+        Copyright &copy; Cream Bangalore, Inc. or its affiliates. All rights reserved.
+    </div>
+    <div class="social-media small-font"> Cream - A Social App ((+91) 80935-09614)</div>
+</div>

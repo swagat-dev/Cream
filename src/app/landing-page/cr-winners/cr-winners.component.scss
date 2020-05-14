@@ -1,0 +1,100 @@
+.winner-container {
+
+    .content {
+
+        .intro {
+            margin: 0 auto;
+            padding-top: 10%;
+            padding-left: 16rem;
+            line-height: 2.2;
+            color: black;
+
+            h1 {
+                font-family: Impact, Charcoal, sans-serif;
+                color: #352961;
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 4px;
+                padding-bottom: 8%
+            }
+        }
+    }
+
+    .carousel-content {
+        display: flex;
+        overflow: hidden;
+        height: 33rem;
+        
+        .first-img-cnt {
+            width: 32rem;
+            padding-right: 3%;
+            animation: slidetoright 1s ease-in-out forwards;
+
+            .details {
+                color: white;
+                text-align: center;
+                bottom: 5rem;
+                position: relative;
+            }
+        }
+
+        .slide-toright {
+            animation: slidetoleft 1s ease-in-out forwards;
+        }
+
+        .sec-img-cnt {
+            width: 32rem;
+            padding-right: 3%;
+            animation: slidetoleft 1s ease-in-out forwards;
+
+            .details {
+                color: white;
+                text-align: center;
+                bottom: 5rem;
+                position: relative;
+            }
+        }
+
+        .slide-toleft {
+            animation: slidetoright 1s ease-in-out forwards;
+        }
+    }
+
+    .circle {
+        display: flex;
+        justify-content: center;
+
+        div {
+            height: 1rem;
+            border-radius: 50%;
+            width: 1rem;
+            margin-left: 2%;
+            background: #352961;
+            cursor: pointer;
+        }
+    }
+}
+
+@keyframes slidetoleft {
+    0% {
+        left: 100rem;
+        position: relative;
+    }
+
+    100% {
+        position: relative;
+        left: 0;
+    }
+}
+
+@keyframes slidetoright {
+    0% {
+        right: 100rem;
+        position: relative;
+    }
+
+    100% {
+        position: relative;
+        right: 0;
+    }
+}

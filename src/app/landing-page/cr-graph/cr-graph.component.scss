@@ -1,0 +1,35 @@
+.graph-container {
+    height: auto;
+    padding-bottom: 5%;
+
+    .content {
+        // width: 65%;
+        text-align: center;
+
+        .intro {
+            width: 30%;
+            margin: 0 auto;
+            padding-top: 10%;
+            line-height: 2.2;
+            color: black;
+
+            h1 {
+                font-family: Impact, Charcoal, sans-serif;
+                color: #352961;
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 4px;
+                padding-bottom: 8%
+            }
+        }
+    }
+
+    .graph-sec {
+        padding-top: 10rem;
+
+        .row {
+            margin: 0;
+            margin-top: 5rem;
+        }
+    }
+}

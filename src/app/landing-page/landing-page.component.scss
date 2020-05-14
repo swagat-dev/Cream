@@ -1,0 +1,46 @@
+.footer-div {
+    background-color: #352961;
+    padding-top: 40px;
+    color: antiquewhite;
+    font-size: 17px;
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        margin: 0 auto;
+        font-family: "ProximaNovaCond",sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 25px;
+
+        img {
+            padding: 0 5px;
+            cursor: pointer;
+        }
+
+        .list {
+            display: flex;
+            justify-content: center;
+            max-width: 100%;
+            flex-flow: row wrap;
+            margin: 0px auto;
+            padding-top: 30px;
+            li {
+                color: inherit;
+                display: flex;
+                flex-grow: 0;
+                flex-shrink: 1;
+                justify-content: space-around;
+                line-height: 32px;
+                padding: 0px 35px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .last-ele {
+        font-size: 12px;
+        padding-top: 50px;
+    }
+}

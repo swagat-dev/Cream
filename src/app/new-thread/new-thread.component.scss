@@ -1,0 +1,62 @@
+.modal-header {
+    padding: 13px;
+    background-color: yellowgreen;
+    color: azure;
+
+    .modal-title {
+        margin: 0 auto;
+        left: 6rem;
+        position: relative;
+        font-family: Impact, Charcoal, sans-serif;
+        letter-spacing: 4px;
+        word-spacing: 6px;
+    }
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.fixed-width {
+    width: 60%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.upload {
+    border: 2px dotted grey;
+    border-radius: 7px;
+    width: 60%;
+    margin: 0 auto;
+    height: 3rem;
+    padding-top: 9px;
+    cursor: pointer;
+
+    button {
+        padding-right: 16px;
+    }
+}
+
+.after-upload {
+    border: 1px solid #e1dede;
+    margin-top: 10px;
+    border-radius: 2px;
+    background-color: aliceblue;
+}
+
+.btn-sec {
+    width: 50%;
+    float: right;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .create-thread-btn {
+        background-color: yellowgreen;
+        color: azure;
+    }
+}
+// .btn-position {
+//     float: right;
+//     right: 19.5em;
+//     position: relative;
+// }

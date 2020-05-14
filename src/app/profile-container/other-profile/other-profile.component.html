@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-md-2 left-sec">
+        <img src="../../../assets/images/winner/winnerNov.jpg" alt="">
+        <div class="profile-name">
+            Swagat Mishra
+        </div>
+        <div class="about">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, suscipit nemo voluptas nostrum assumenda veritatis alias consequatur quis vero molestias consequuntur vel eius quasi obcaecati quaerat at voluptatem ipsa facere.
+        </div>
+        <div class="role">
+            Candidate
+        </div>
+    </div>
+    <div class="col-md-7 right-sec">
+        <div class="row custom-card" *ngFor="let thread of threads">
+            <div class="col-md-1">
+                <div class="avatar">
+                    <img src={{thread.profileImage}} alt="profilepic">
+                </div>
+            </div>
+            <div class="col-md-11">
+                <div class="thread-head"> {{ thread.createdBy }} </div>
+                <div class="thread-sub-head"> {{ thread.createdOn }} </div> 
+                <div class="votes" *ngIf="thread.hasShared">
+                    <img src="../../assets/images/thumbsup.png" matTooltip="Votes" alt=""> {{ thread.votes }}
+                    <img src="../../assets/images/unlike.png"  matTooltip="Reported Spam" alt=""> {{ thread.flags }}
+                </div>
+                <div class="votes" *ngIf="!thread.hasShared">
+                    <button mat-icon-button color="primary">
+                        <mat-icon matTooltip="Share" matTooltipPosition="above">share</mat-icon>
+                    </button>
+                    <button mat-icon-button color="primary">
+                        <mat-icon matTooltip="Edit" matTooltipPosition="above">edit</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div [ngClass]="{'col-md-7' : thread?.images?.length > 0, 'col-md-12': thread?.images?.length === 0}">
+                <div class="thread-desc">
+                    {{ thread.description }}
+                </div>
+            </div>
+            <div *ngIf="thread?.images?.length > 0" class="col-md-5">
+                <div class="thread-image">
+                    <carousel [interval]="postImageInterval">
+                        <slide *ngFor="let slide of thread.images; let i = index">
+                          <img src={{slide}} alt="first slide" style="display: block; height: 70%; width: 100%;">
+                        </slide>
+                    </carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 end-sec">
+        <div class="head">
+            Basic Details
+        </div>
+        <mat-divider></mat-divider>
+        <div class="contact-details">
+            <div> Email Id : swagat.m2011@gmail.com </div>
+            <div> Contact Number : +91-80935-09614 </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="address">
+            <div> Location : Pune </div>
+            <div> State : Maharastra </div>
+            <div> Pin : 755098 </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="thread">
+            <div> Number of threads created : 200 </div>
+            <div> Reported Thread Count : 4 </div>
+        </div>
+    </div>
+</div>

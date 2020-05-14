@@ -1,0 +1,154 @@
+.top-div {
+    margin-top: 10px;
+}
+
+.bottom-div {
+    margin-top: 10px;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.why-cream {
+    border-radius: 10px;
+
+    .shadow {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .mat-card-header .mat-card-title {
+        font-size: 19px;
+    }
+
+    mat-card {
+        margin-right: -16px;
+    }
+
+    section {
+        margin-top: 6px;
+        overflow: auto;
+        line-height: 1.7;
+        word-spacing: 3px;
+    }
+
+    .last-line {
+        margin-left: 15px;
+    }
+
+    ol {
+        height: 12vh;
+        
+        li {
+            list-style-type: oriya;
+            transition: font-size .3s;
+            color: blue;
+        }
+    
+        li:hover {
+            color: tomato;
+            font-size: 16px;
+        }
+    }
+
+    .btn-div {
+        display: flex;
+        flex-direction: row-reverse;
+
+        mat-icon {
+            margin-bottom: 2px;
+            margin-left: 5px;
+        }
+    }
+
+    mat-card {
+        padding-bottom: 10px;
+    }
+
+    button {
+        background: white;
+        color: black;
+        float: right;
+    }
+
+    .button-up {
+        bottom: 10px;
+    }
+}
+
+.winner-list {
+    border-radius: 10px;
+
+    .winner-head {
+        font-size: 18px;
+        img {
+            margin-left: 8px;
+            margin-bottom: 2px;
+        }
+    }
+
+    .card-content {
+        text-align: right;
+
+        .carousel-area {
+            margin: 10px 0 5px 0;
+        }
+
+        .carousel-item {
+            height: 33vh;
+        }
+    }
+}
+
+.footer-div {
+    background-color: rgb(34, 34, 34);
+    padding-top: 40px;
+    color: #949090;
+    font-size: 17px;
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        margin: 0 auto;
+        font-family: "ProximaNovaCond",sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 25px;
+
+        img {
+            padding: 0 5px;
+            cursor: pointer;
+        }
+
+        .list {
+            display: flex;
+            justify-content: center;
+            max-width: 100%;
+            flex-flow: row wrap;
+            margin: 0px auto;
+            padding-top: 30px;
+            li {
+                color: inherit;
+                display: flex;
+                flex-grow: 0;
+                flex-shrink: 1;
+                justify-content: space-around;
+                line-height: 32px;
+                padding: 0px 35px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .last-ele {
+        font-size: 12px;
+        padding-top: 50px;
+    }
+}
+
+mat-card {
+    margin-bottom: 13px;
+}
+    

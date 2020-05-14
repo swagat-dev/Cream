@@ -1,0 +1,119 @@
+.process {
+    background-color: #f1f3f8;
+    height: auto;
+    margin-top: 20%;
+    padding-bottom: 5%;
+
+    .content {
+        width: 65%;
+
+        .intro {
+            color: white;
+            width: 50%;
+            margin: 0 auto;
+            padding-top: 10%;
+            line-height: 2.2;
+            color: black;
+
+            h1 {
+                font-family: Impact, Charcoal, sans-serif;
+                color: #352961;
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 4px;
+                padding-bottom: 8%
+            }
+
+            ul {
+                margin-top: 2rem;
+                li {
+                    list-style-position: inside;
+                    list-style-image: url('../../../assets/images/checkmark.png');
+
+                    span {
+                        padding: 0 20px;
+                        bottom: 4px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-container {
+        .card-sec {
+            display: flex;
+            // text-align: center;
+            margin-top: 7%;
+
+            mat-card {
+                cursor: pointer;
+                width: 23%;
+                margin: 0 auto;
+                height: 65vh;
+
+                .header-color {
+                    background-color: #352961;
+                    height: 2%;
+                    width: 110%;
+                    right: 5%;
+                    position: relative;
+                    bottom: 1rem;
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
+                    margin-bottom: 20%;
+                    // animation: redhover .5s ease-out forwards;
+                }
+
+                .header-color-red {
+                    background-color: #f44336;
+                    height: 2%;
+                    width: 110%;
+                    right: 5%;
+                    position: relative;
+                    bottom: 1rem;
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
+                    margin-bottom: 20%;
+                    animation: redhover .5s ease-out forwards;
+                }
+
+                h2 {
+                    font-family: Impact, Charcoal, sans-serif;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    letter-spacing: 4px;
+                    padding-bottom: 8%;
+                    color: #352961;
+                }
+
+                .desc {
+                    color: #5f5959;
+                    line-height: 2;
+                    margin-top: 2rem;
+                }
+                
+            }
+
+            mat-card:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+@keyframes redhover {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 110%;
+    }
+}
+
+// @keyframes popup {
+//     0% {
+
+//     }
+// }

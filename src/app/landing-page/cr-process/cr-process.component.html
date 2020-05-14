@@ -1,0 +1,32 @@
+<div class="process">
+    <div class="content">
+        <section class="intro">
+            <h1>
+                How Do Cream Do
+            </h1>
+            Building the country,
+            we will be grouping the crowd by constituency. <br>
+            There would be three groups in each constituency
+            <ul class="cursor-pointer">
+                <li (click)="openRoleDetails('Candidates')"> <span> Cream Candidates </span></li>
+                <li (click)="openRoleDetails('Supporters')"> <span> Supporters </span></li>
+                <li (click)="openRoleDetails('Observers')"> <span> Observers </span></li>
+                <li (click)="openRoleDetails('Trainers')"> <span> Trainers </span></li>
+            </ul>
+        </section>
+    </div>
+    <div class="card-container">
+        <div class="card-sec">
+            <mat-card *ngFor="let role of roleDetails; let i = index" (mouseover)="selected(role.role)" (mouseout)="deSelected(role.role)">
+                <div *ngIf="!showHover[i]" class="header-color"></div>
+                <div *ngIf="showHover[i]" class="header-color-red"></div>
+                <h2>{{ role.role }}</h2>
+                <div class="desc">
+                    {{ role.description }}
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    
+    
+</div>

@@ -1,0 +1,273 @@
+.login-container {
+    background-image: url(../../assets/images/login-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    .black-cover {
+        background-color: black;
+        opacity: 0.8;
+        height: inherit;
+
+        .login {
+            margin: 0 auto;
+            width: 32%;
+
+            .divider {
+                position: relative;
+
+                mat-divider:nth-child(1) {
+                    border-top: 1px solid grey;
+                    top: 11px;
+                    left: 17px;
+                }
+
+                mat-divider:nth-child(3) {
+                    border-top: 1px solid grey;
+                    top: 11px;
+                    right: 17px;
+                }
+
+                span {
+                    text-align: center;
+                    color: navajowhite;
+                }
+            }
+
+            .login-ani{
+                position: relative;
+                animation: login 1s ease-out forwards;
+            }
+
+            .form {
+                padding: 50px 20px 0;
+
+                .back {
+                    float: right;
+                    bottom: 17px;
+                    position: relative;
+                    cursor: pointer;
+                }
+
+                div {
+                    button {
+                        margin-top: 10px;
+                    }
+                }
+
+                h5 {
+                    padding-bottom: 20px;
+                }
+
+                a {
+                    color: black; 
+                }
+
+                a:hover {
+                    text-decoration: none;
+                    color: #3296ec;
+                }
+
+                .forgot-password {
+                    padding: 10px 0 30px;
+                    font-size: 13px;   
+                }
+
+                .new-account {
+                    text-align: center;
+                    padding-top: 22px;
+                    padding-bottom: 9vh;
+
+                    .signup-btn {
+                        color: blue;
+                        cursor: pointer;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                    border-radius: 30px
+                }
+            }
+            .other-login {
+                animation: login 1s ease-out forwards;
+            }
+
+            .other-resister {
+                animation: other 1s ease-out forwards;
+            }
+
+            .other-login {
+                // padding-top: 20px;
+                // padding-bottom: 9px; 
+                text-align: center;
+                
+                button {
+                    img {
+                        padding-bottom: 4px;
+                    }
+                }
+                button:nth-child(2) {
+                    margin-left: 40px;
+                    background-color: #b50c0c;
+                    color: white;
+                }
+
+                button:nth-child(1) {
+                    background-color: #2338a5;
+                    color: white;
+                }
+            }
+        }
+
+        .register {
+            position: relative;
+            animation: register 1s ease-out forwards;
+
+            .cross {
+                vertical-align: middle;
+                float: right;
+                bottom: 64px;
+                position: relative;
+                right: 20px;
+                cursor: pointer;
+            }
+
+            h5 {
+                padding-bottom: 20px;
+                padding-top: 40px;
+                padding-left: 30px;
+            }
+
+            .btn-stepper {
+                display: flex;
+                flex-direction: row-reverse;
+
+                button {
+                    width: 13em;
+                }
+            }
+
+            .btn-stepper-back {
+                display: flex;
+                flex-direction: row-reverse;
+
+                button {
+                    width: 7em;
+                    margin-left: 16px;
+                }
+            }
+
+            .upload-dv {
+                margin: 20px 0 30px 0;
+                .upload {
+                    height: 22vh;
+                    border: 2px dotted #b9adad;
+                    border-radius: 7px;
+                    margin: 0 auto;
+                    width: 63%;
+                    text-align: center;
+
+                    .input-upload {
+                        margin-top: 20%;
+                        img {
+                            cursor: pointer;
+                        }
+                        .uploaded-image {
+                            height: 19vh;
+                            bottom: 42px;
+                            position: relative;
+                        }
+
+                        .remove-img {
+                            bottom: 18vh;
+                            position: relative;
+                        }
+                    }
+                }
+
+                .accept-img {
+                    float: right;
+                    position: relative;
+                    bottom: 21vh;
+                    right: 28px;
+                    font-size: 12px;
+                    background-color: green;
+                    width: 50px;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    color: white;
+                    text-align: center;
+                    cursor: pointer;
+                }
+
+                .reject-img {
+                    float: right;
+                    position: relative;
+                    bottom: 18vh;
+                    left: 23px;
+                    font-size: 12px;
+                    background-color: red;
+                    width: 50px;
+                    border-bottom-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                    color: white;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+
+            .terms {
+                margin-bottom: 10px;
+            }
+
+            .register-btn {
+                button {
+                    width: 7em;
+                    margin-left: 16px;
+                }
+
+                button:nth-child(1) {
+                    margin-left: 0px;
+                }
+                button:nth-child(3) {
+                    width: 13em;
+                    float: right;
+                    margin-left: 0px;
+                }
+            }
+        }
+    } 
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: green !important;
+}
+
+@keyframes register {
+    0% {
+        top: 120px;
+    }
+    100% {
+        top: 60px;
+    }
+}
+
+@keyframes login {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 18vh;
+    }
+}
+
+@keyframes other {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 8vh;
+    }
+}

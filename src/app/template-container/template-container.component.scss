@@ -1,0 +1,53 @@
+.container-cls {
+    min-height: 46.3rem;
+    // background: linear-gradient(to top, #ffffff 0%, #99ccff 100%);
+    background: linear-gradient(to top, #ffffff 31%, #0099cc 192%);
+    background-attachment: fixed;
+
+    .row {
+        margin-right: 0;
+
+        .side-menu {
+            padding-top: 10rem;
+            position: fixed;
+
+            .menu-itm {
+                background: #ffc800e0;
+                padding: 1rem;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                color: white;
+                text-transform: uppercase;
+                width: 47%;
+                word-break: break-all;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .selected-item {
+                animation: selecteddiv .3s linear forwards;
+            }
+
+            .menu-itm:hover {
+                background: #bcca49;
+            }
+        }
+
+        .right-sec {
+            left: 8rem;
+        }
+    }
+    
+}
+
+@keyframes selecteddiv {
+    0% {
+        padding: 1rem;
+    }
+
+    100% {
+        background: green;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

@@ -1,0 +1,17 @@
+<div class="staring-home">
+    <div class="navibar">
+        <div class="container-fluid">
+            <span class="back-arrow" *ngIf="showback" (click)="backBtnClicked()"> <mat-icon>arrow_back</mat-icon> </span>
+            <span class="brand-name"> CREAM </span>
+            <span class="signout">
+                <span class="profile" (click)="openProfile()">
+                    <span class="avatar">
+                        <img src="../../assets/images/winner/winnerNov.jpg"  alt="">
+                    </span>
+                    <span class="profile-name"> Swagat Mishra </span>
+                </span>
+                <button mat-stroked-button color="primary" class="signout-btn" (click)="signOut()">Sign out</button>
+            </span>
+        </div>
+    </div>
+</div>

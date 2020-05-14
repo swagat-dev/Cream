@@ -1,0 +1,56 @@
+<div class="modal-header">
+    <h5 class="modal-title pull-left">CREATE THREAD</h5>
+    <button type="button" class="close pull-right cursor-pointer" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form [formGroup]="threadForm" (ngSubmit)="onSubmit(threadForm)">
+        <mat-form-field class="fixed-width">
+            <input type="text" matInput placeholder="Location" maxlength="50" formControlName="location"/>
+        </mat-form-field>
+        <mat-form-field class="fixed-width">
+            <input type="text"
+                    placeholder="Select State/UT"
+                    matInput
+                    [formControl]="myControl"
+                    [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{ option }}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field class="fixed-width">
+            <mat-label>Select Catagory</mat-label>
+            <mat-select name="catogory" formControlName="category">
+                <mat-option *ngFor="let cat of catagory"  matTooltip={{cat.description}} matTooltipPosition="above" [value]="cat">
+                    <span> {{ cat.name }} </span>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="fixed-width">
+            <textarea matInput rows="6" cols="50" placeholder="Description" formControlName="description"></textarea>
+        </mat-form-field>
+        
+        <div class="upload">
+            <span (click)="uploader.click()"> Add Supporting Photos </span>
+            <input type="file" accept="image/*" class="input-upload" #uploader (change)="fileChange($event)" hidden>
+        </div>
+
+        <div class="upload after-upload" *ngFor="let file of fileName">
+            {{ file }} 
+            <button type="button" class="close pull-right cursor-pointer" aria-label="Close" (click)="removeAttachment(file)">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <div class="btn-sec">
+            <button type="submit" [disabled]="!threadForm.valid" class="btn create-thread-btn"> CREATE </button>
+        </div>
+        <!-- <alert type="success" *ngIf="dismissible" [dismissOnTimeout]=5000 [dismissible]="dismissible" (onClosed)="onClosed()">
+            You've Successfully Posted Your Thoughts.
+        </alert> -->
+    </form>
+</div>

@@ -1,0 +1,20 @@
+<div [ngClass]="{'white-starting': hasScrolled, 'vio-starting': !hasScrolled}" class="staring-home">
+    <div [ngClass]="{'white-navibar': hasScrolled, 'vio-navibar': !hasScrolled}" class="navibar">
+        <div class="container-fluid">
+            <span class="brand-name"> CREAM </span>
+            <span class="navigation">
+                <nav class="navigation-item">
+                    <ul>
+                        <li *ngFor="let menu of dashboardMenu; let i = index" (click)="toggleDivider(menu); movetoPage(menu)" (mouseover)="tempToggle(menu)" (mouseout)="resetToggle()">
+                            {{ menu }}
+                            <mat-divider *ngIf="afterHover[i]" [ngClass]="{'white-divider': !hasScrolled, 'vio-divider': hasScrolled}" class="divider"></mat-divider>
+                        </li>
+                    </ul>
+                </nav>
+            </span>
+        </div>
+    </div>
+    <span [ngClass]="{'short-login-sec': hasScrolled}" class="login-sec">
+        <button mat-raised-button color="warn" (click)="goToLogin()">Sign in</button>
+    </span>
+</div>
