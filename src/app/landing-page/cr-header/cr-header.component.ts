@@ -76,8 +76,8 @@ export class CrHeaderComponent implements OnInit, OnChanges {
   }
 
   public goToLogin() {
-    // this.router.navigate(['/login']);
-    this.router.navigate(['/success/threads']);
+    this.router.navigate(['/login']);
+    // this.router.navigate(['/success/threads']);
   }
 
   public movetoPage(selectedMenu) {

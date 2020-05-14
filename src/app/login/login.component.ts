@@ -79,6 +79,7 @@ export class LoginComponent implements OnInit {
   // on click - Sign in
   public onSubmit(formData) {
     console.log('..........', formData);
+    this.router.navigate(['/success/threads']);
   }
 
   // on click - Sign up
@@ -100,9 +101,6 @@ export class LoginComponent implements OnInit {
 
   public onInput(e) {
     console.log(e);
-    this.commonService.getLocation(e.data).subscribe( location => {
-      console.log('Output == ', location);
-    });
   }
 
   public fileChange(file) {
